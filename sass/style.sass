@@ -2,6 +2,10 @@
 $white: #fff
 
 *
+  &:not(pre) > code
+    background-color: transparentize($white, .7)
+    padding: 1px 3px 3px
+    font-family: 'Inconsolata', monospace
   box-sizing: border-box
 
 // Normal stuff
@@ -72,11 +76,6 @@ pre
   top: 0
   left: 0
 
-:not(pre) > code
-  background-color: transparentize($white, .7)
-  padding: 1px 3px 3px
-  font-family: 'Inconsolata', monospace
-
 .buttons
   position: fixed
   top: 0
@@ -89,7 +88,7 @@ pre
 
   // Allow buttons to scroll on small screens
   max-width: 100%
-  overflow-x: scroll
+  overflow-x: auto
   white-space: nowrap
 
   button,
